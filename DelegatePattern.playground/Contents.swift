@@ -8,7 +8,7 @@ struct Action {
     var delegate: TransactionCompletedDelegate?
     
     func processSomething(_ value: String) {
-        print("[Action](main) Star processing in background...")
+        print("[Action](main) Star processing in background with: \(value)")
         DispatchQueue.global(qos: .background).async {
             let reversed = String(value.reversed())
             print("[Action](background) Calculation completed")
@@ -36,7 +36,7 @@ struct ViewModel: TransactionCompletedDelegate {
     
     func mainMethod(string: String){
         print("[ViewModel] Initiated mainMethod with: \(string)")
-        action.processSomething(":\(string):")
+        action.processSomething("<\(string)>")
     }
     
     func didFinishTransaction(value: String) {
@@ -45,4 +45,4 @@ struct ViewModel: TransactionCompletedDelegate {
 }
 
 let view = ViewModel()
-view.mainMethod(string: "yolo")
+view.mainMethod(string: "anita lava la tina")

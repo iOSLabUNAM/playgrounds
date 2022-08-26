@@ -34,6 +34,11 @@ let vectB32 = Vector<Float32>(x: Float32(0.3), y: Float32(0.2), z: Float32(0.1))
 
 vectA32.mod2(vectB32)
 
+let vectA64 = Vector<Float64>(x: Float64(0.1), y: Float64(0.2), z: Float64(0.3))
+let vectB64 = Vector<Float64>(x: Float64(0.3), y: Float64(0.2), z: Float64(0.1))
+
+vectA64.mod2(vectB64)
+
 let vectA80 = Vector<Float80>(x: Float80(0.1), y: Float80(0.2), z: Float80(0.3))
 let vectB80 = Vector<Float80>(x: Float80(0.3), y: Float80(0.2), z: Float80(0.1))
 
