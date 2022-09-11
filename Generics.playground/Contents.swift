@@ -4,13 +4,13 @@ struct Vector<T: Numeric> {
     let x: T
     let y: T
     let z: T
-    
+
     init(x: T, y: T, z: T) {
         self.x = x
         self.y = y
         self.z = z
     }
-    
+
     func mod2(_ other: Vector) -> T {
         let x2 = (self.x - other.x) * (self.x - other.x)
         let y2 = (self.y - other.y) * (self.y - other.y)
@@ -48,4 +48,3 @@ let vectADob = Vector<Double>(x: Double(0.1), y: Double(0.2), z: Double(0.3))
 let vectBDob = Vector<Double>(x: Double(0.3), y: Double(0.2), z: Double(0.1))
 
 vectADob.mod2(vectBDob)
-
